@@ -103,7 +103,7 @@ class %sBloc extends Bloc<%sEvent, %sState> {
     Emitter<%sState> emit,
   ){
       event.map(
-        initial: (event) { //TODO(): Implement event handler },
+        initial: (event) {}, //TODO(): Implement event handler
       );
   }
 }
