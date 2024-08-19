@@ -91,10 +91,10 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part '%s_event.dart';
 part '%s_state.dart';
-part '%s_bloc.freezed.dart'
+part '%s_bloc.freezed.dart';
 
 class %sBloc extends Bloc<%sEvent, %sState> {
-  %sBloc() : super(_Initial()) {
+  %sBloc() : super(const _Initial()) {
     on<%sEvent>(_on%sEvent);
   }
 
@@ -103,7 +103,7 @@ class %sBloc extends Bloc<%sEvent, %sState> {
     Emitter<%sState> emit,
   ){
       event.map(
-        initial: (event) {}, //TODO(): Implement event handler
+        started: (event) {}, //TODO(): Implement event handler
       );
   }
 }
@@ -155,7 +155,7 @@ bloc.create_bloc_state_template_freezed = function(bloc_name)
 part of '%s_bloc.dart';
 
 @freezed
-class %sState extends _$%sState {
+class %sState with _$%sState {
   const factory %sState.initial() = _Initial;
 }
 
